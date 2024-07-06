@@ -7,21 +7,42 @@ public class Circle {// Save as "Circle.java"
 	// Constructors (overloaded)
 	/** Constructs a Circle instance with default value for radius and color */
 	public Circle() { // 1st (default) constructor
-		radius = 1.0;
-		color = "red";
+		this.radius = 1.0;
+		this.color = "red";
 	}
 
 	/** Constructs a Circle instance with the given radius and default color */
 	public Circle(double r) { // 2nd constructor
-		radius = r;
-		color = "red";
+		this.radius = r;
+		this.color = "red";
 	}
+	
+	public Circle(double r, String c) {
+		this.radius = r;
+		this.color = "c";
+	}
+	
 
 	/** Returns the radius */
 	public double getRadius() {
-		return radius;
+		return this.radius;
+	}
+	
+	public String getColor() {
+		return this.color;
 	}
 
+	public void setRadius(double r) {
+		this.radius = r;
+	}
+	
+	public void setColor(String c) {
+		this.color = c;
+	}
+	
+	public String toString() {
+		return "Circle[radius=" + this.radius + " color=" + this.color + "]";
+	}
 	/** Returns the area of this Circle instance */
 	public double getArea() {
 		return radius * radius * Math.PI;
